@@ -1,0 +1,100 @@
+
+public abstract class SportsTeam {
+/*
+ * instance variable:
+ * #teamName: String
+ * #teamMascot: string
+ * #headCoach: String
+ * #wins: int
+ * #losses: int
+ * 
+ * Methods:
+ * +team()
+ * +Team(String teamName, String teamMascot, String headCoach)
+ * +getWinPercentage():double
+ * +getStats(): double [] <<abstract>>
+ * 
+ */
+	protected String teamName;
+	protected String teamMascot;
+	protected String headCoach;
+	protected int wins;
+	protected int losses;
+	 
+	
+	//Not sure if the following should be in methods or instantiated like this?
+	//double getWinPercentage;
+	double[] getStats;
+	public abstract double getStats();
+	
+	public SportsTeam() {
+		
+	}//empty constructor
+
+	public SportsTeam(String teamName, String teamMascot, String headCoach, int wins, int losses) 
+	{
+		
+	}//end preferred constructor
+	
+	//getters/setters - need to figure out which are necessary
+	public String getTeamName() {
+		return teamName;
+	}//end teamName getter
+
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
+	}//end teamName setter
+
+	public String getTeamMascot() {
+		return teamMascot;
+	}//end teamMascot getter
+
+	public void setTeamMascot(String teamMascot) {
+		this.teamMascot = teamMascot;
+	}//end teamMascot setter
+
+	public String getHeadCoach() {
+		return headCoach;
+	}//end headCoach getter
+
+	public void setHeadCoach(String headCoach) {
+		this.headCoach = headCoach;
+	}//end headCoach setter
+
+	public int getWins() {
+		return wins;
+	}//end wins getter
+
+	public void setWins(int wins) {
+		this.wins = wins;
+	}//end wins setter
+
+	public int getLosses() {
+		return losses;
+	}//end losses getter
+
+	public void setLosses(int losses) {
+		this.losses = losses;
+	}//end losses setter
+
+	public double getGetWinPercentage() {
+		return getWinPercentage;
+	}//end winPercentage getter
+
+	public void setGetWinPercentage(double getWinPercentage) {
+		this.getWinPercentage = getWinPercentage;
+	}//end getWinPercentage setter
+
+	public double[] getGetStats() {
+		return getStats;
+	}//end getStats getter
+
+	public void setGetStats(double[] getStats) {
+		this.getStats = getStats;
+	}//end getStats setter
+
+	//# 4 getWinPercentage Formula:
+	
+	public double getWinPercentage = wins/(wins+losses);
+	
+}//end class
