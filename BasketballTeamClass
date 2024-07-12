@@ -1,0 +1,118 @@
+/*
+ * Instance Variables: 
+ * -fieldGoals int
+ * -fieldGoalsAttempted: int
+ * freeThrows: int
+ * freeThrowsAttempted: int
+ * 
+ * methods
+ * +BasketballTeam();
+ * +BasketballTEam(String teamName, String teamMascot, String headCoach)
+ * fieldGoalPercentage(): double
+ * freeThrowPercentage(): double
+ * +setStats(int wins, int fieldGoals, int FieldGoalsAttempted, int freeThrows, int freeThrowsAttempted): void
+ */
+public class BasketballTeam extends SportsTeam {
+
+	
+	private int fieldGoals;
+	private int fieldGoalsAttempted;
+	private int freeThrows;
+	private int freeThrowsAttempted;
+	
+	//Not sure if I need these next variables?
+	public String teamName;
+	public String teamMascot;
+	public String headCoach;
+	
+	public BasketballTeam() 
+	{
+		
+	}//empty constructor as is?
+	
+	public BasketballTeam(String teamName, String teamMascot, String headCoach) 
+	{	
+	
+	}//ideal constructor?
+
+	//start getters/setters 
+	public int getFieldGoals() {
+		return fieldGoals;
+	}//end FieldGoals getters
+
+	public void setFieldGoals(int fieldGoals) {
+		this.fieldGoals = fieldGoals;
+	} //end FieldGoals setter
+
+	public int getFieldgoalsAttempted() {
+		return fieldGoalsAttempted;
+	}//end FieldGoalsAttempted getter
+
+	public void setFieldgoalsAttempted(int fieldgoalsAttempted) {
+		this.fieldGoalsAttempted = fieldgoalsAttempted;
+	}//end FieldGoalsAttempted setter
+
+	public int getFreeThrows() {
+		return freeThrows;
+	}//end freeThrows getter
+
+	public void setFreeThrows(int freeThrows) {
+		this.freeThrows = freeThrows;
+	}//end freeThrows setter
+
+	public int getFreeThrowsAttempted() {
+		return freeThrowsAttempted;
+	}//end freeThrowsAttemped getter
+
+	public void setFreeThrowsAttempted(int freeThrowsAttempted) {
+		this.freeThrowsAttempted = freeThrowsAttempted;
+	}//end FreeThrowsAttemtped setter
+
+	public String getTeamName() {
+		return teamName;
+	}//end teamName getter
+
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
+	}//end teamName setter
+
+	public String getTeamMascot() {
+		return teamMascot;
+	}//end teamMascot getter
+
+	public void setTeamMascot(String teamMascot) {
+		this.teamMascot = teamMascot;
+	}//end teamMascot setter
+
+	public String getHeadCoach() {
+		return headCoach;
+	}//end headCoach getter
+
+	public void setHeadCoach(String headCoach) {
+		this.headCoach = headCoach;
+	}//end headCoach setter
+	//end getters/setters
+	
+	
+	//Question 3- fieldGoalPercentage 
+	
+	public double fieldGoalPercentage = (fieldGoals/fieldGoalsAttempted);
+	
+	//Question 4 - freeThrowPercentage
+	
+	public double freeThrowPercentage = (freeThrows/freeThrowsAttempted);
+	
+	//Question 5 - get stats
+	
+	public void setStats (int wins, int losses, int fieldGoals, int FieldGoalsAttempted, int freeThrow, int freeThrowsAttempted)
+	{
+		
+	}
+//this was suggested + added by Eclipse, can you please tell me what it means? 
+	@Override
+	public double getStats() {
+		// TODO Auto-generated method stub
+		return 0;
+	} 
+	
+}
