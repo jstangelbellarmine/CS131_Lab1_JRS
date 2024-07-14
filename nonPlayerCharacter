@@ -1,4 +1,5 @@
 import java.security.SecureRandom;
+import java.util.Random;
 
 /**
  * This is our NonPlayer Character that inherits
@@ -12,38 +13,40 @@ import java.security.SecureRandom;
 
 public class NonPlayerCharacter extends GameCharacter {//begin class
 	
+	
+
+	
 	private boolean active = false;//instance variable
 	private String intelligenceType;//instance variable
 	public String introduce;
-	public String exclaim;
+	public String[] exclaim={"Dag Gummit","Doggone it","Holy Cow","Jeez","Well cheese and crackers"};
+	Random r=new Random();
+	int randomNumber=r.nextInt(exclaim.length);
 	
 	public NonPlayerCharacter()
 	{//begin empty argument-constructor
-		
+		super.reportStructure();
 	}//end empty-argument constructor
 	
-	//when to put "this.____) etc.
+	
 	public NonPlayerCharacter(String id, String personality, boolean active, String intelligenceType) 
 	{
 		this.personality= personality;
 		this.active= false;
 		this.intelligenceType= intelligenceType;
-		
 	}//preferred constructor 
-	/*
-	 * I tried this at first: 
-	public String reportStructure()
-	
-	{
-		super.reportStructure();	
-	}
-	 */
+
 	public String reportStructure(){
 		
 		StringBuilder sb = new StringBuilder("==================================\n");
 		sb.append("UniqueID: "+getUniqueID()+"\n");
-		sb.append("Intelligence Type: " + getIntelligenceType() + "\n");
+		sb.append("Personality: "+getPersonality()+"\n");
 		sb.append("==================================\n");
+		sb.append("Active: "+isActive()+"\n");
+		sb.append("Intelligence: "+getIntelligenceType()+"\n");
+		sb.append("==================================\n");
+		sb.append("Hello, my name is "+getUniqueID()+"\n");
+		//sb.append(exclaim); // This always results in "[Ljava.lang.String;@3cd1f1c8" whenever I try invoking this method 
 		
 		return sb.toString();
 	}//end reportStats
@@ -59,8 +62,8 @@ public class NonPlayerCharacter extends GameCharacter {//begin class
 		this.exclaim = exclaim;
 		return exclaim.toString();
 	}
-	//Getters / Setters
 	
+	//Getters / Setters
 	public boolean isActive() {
 		return active;
 	}
@@ -84,12 +87,18 @@ public class NonPlayerCharacter extends GameCharacter {//begin class
 		this.introduce = introduce;
 	}
 
-	public String getExclaim() {
+	public String[] getExclaim() {
 		return exclaim;
 	}
 
-	public void setExclaim(String exclaim) {
+	public void setExclaim(String[] exclaim) {
 		this.exclaim = exclaim;
+		/*
+		* Random r=new Random();
+		*int randomNumber=r.nextInt(exclaim.length);
+		*System.out.println(exclaim[randomNumber]);
+		**/
+		//return this.exclaim; // I am unsure how to return this method when it is void
 	}
 
 	@Override
