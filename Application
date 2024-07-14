@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * This is the Application object that will launch our application
  * @author Rob Kelley
@@ -9,16 +11,29 @@ public class Application {
 
 	public static void main(String[] args) {
 		
-		NonPlayerCharacter npc = new NonPlayerCharacter();
-		System.out.println(npc.toString());//example npc
+		/*
+		 * I was unsure how to make this array of names work under the "exclaim" method
+		 * I included it here to show I know how to an array. 
+		 * You can see my junk/commented out code under exclaim method in NonPlayerCharacter Class
+		 */
+		String[] exclaim={"Dag Gummit","Doggone it","Holy Cow","Jeez","Well cheese and crackers"};
+		Random r=new Random();
+		int randomNumber=r.nextInt(exclaim.length);
 		
+		
+	/*	
+	*	NonPlayerCharacter npc = new NonPlayerCharacter();
+	*	System.out.println(npc.toString());//example npc
+	*	System.out.println(npc.reportStructure());
+	*/
 		NonPlayerCharacter npc2 = new NonPlayerCharacter("4145", "NEUTRAL", true, "AVERAGE");
-		System.out.println(npc2.toString());
-		
-		
-		System.out.println(npc.reportStructure());
+		System.out.println("Stats at a glance: "+npc2.toString());//2nd npc
 		System.out.println(npc2.reportStructure());
-
+		System.out.print(exclaim[randomNumber]);
+	
+		
+		
+		
 	}//end main
 
 }//end class
