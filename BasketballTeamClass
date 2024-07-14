@@ -1,4 +1,5 @@
-/*
+/*PLANNING SPACE
+ * 
  * Instance Variables: 
  * -fieldGoals int
  * -fieldGoalsAttempted: int
@@ -15,15 +16,14 @@
 public class BasketballTeam extends SportsTeam {
 
 	
-	private int fieldGoals;
-	private int fieldGoalsAttempted;
-	private int freeThrows;
-	private int freeThrowsAttempted;
+	private int fieldGoals=0;
+	private int fieldGoalsAttempted=0;
+	private int freeThrows=0;
+	private int freeThrowsAttempted=0;
 	
-	//Not sure if I need these next variables?
-	public String teamName;
-	public String teamMascot;
-	public String headCoach;
+	public String teamName="";
+	public String teamMascot="";
+	public String headCoach="";
 	
 	public BasketballTeam() 
 	{
@@ -102,15 +102,17 @@ public class BasketballTeam extends SportsTeam {
 	
 	public double freeThrowPercentage = (freeThrows/freeThrowsAttempted);
 	
-	//Question 5 - get stats
+	//Question 5 - getStats
 	
 	public void setStats (int wins, int losses, int fieldGoals, int FieldGoalsAttempted, int freeThrow, int freeThrowsAttempted)
 	{
 		
 	}
-//this was suggested + added by Eclipse, can you please tell me what it means? 
-	@Override
+	
+	@Override //This "@override" was created by Eclipse, is this an issue with my code I should be aware of? 
 	public double getStats() {
+			this.getStats = getStats;
+			double[] getStats = {getWinPercentage,fieldGoalPercentage,freeThrowPercentage};
 		// TODO Auto-generated method stub
 		return 0;
 	} 
