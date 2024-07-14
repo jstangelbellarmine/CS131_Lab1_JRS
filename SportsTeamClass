@@ -1,6 +1,6 @@
 
 public abstract class SportsTeam {
-/*
+/* UML Diagram Requirements 
  * instance variable:
  * #teamName: String
  * #teamMascot: string
@@ -15,15 +15,13 @@ public abstract class SportsTeam {
  * +getStats(): double [] <<abstract>>
  * 
  */
-	protected String teamName;
-	protected String teamMascot;
-	protected String headCoach;
-	protected int wins;
-	protected int losses;
-	 
+	protected String teamName="";
+	protected String teamMascot="";
+	protected String headCoach="";
+	protected int wins=0;
+	protected int losses=0;
 	
-	//Not sure if the following should be in methods or instantiated like this?
-	//double getWinPercentage;
+	
 	double[] getStats;
 	public abstract double getStats();
 	
