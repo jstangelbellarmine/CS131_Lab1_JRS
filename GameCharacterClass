@@ -54,7 +54,6 @@ public abstract class GameCharacter {
 		sb.append("UniqueID: "+getUniqueID()+"\n");
 		sb.append("Personality: "+getPersonality()+"\n");
 		sb.append("==================================\n");
-		
 		return sb.toString();
 		
 	}//end reportStats
